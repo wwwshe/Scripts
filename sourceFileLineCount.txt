@@ -1,0 +1,3 @@
+find . -path ./Pods -prune -o -name "*.swift" -print0 ! -name "/Pods" | xargs -0 wc -l
+(excluiding ./Pods from find)
+Mixed ObjC + Swift project: find . -type d ( -path ./Pods -o -path ./Vendor ) -prune -o ( -iname *.m -o -iname *.mm -o -iname *.h -o -iname *.swift ) -print0 | xargs -0 wc -l
